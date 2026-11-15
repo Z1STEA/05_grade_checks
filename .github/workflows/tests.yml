@@ -1,3 +1,4 @@
+# Run tests when relevant files change
 name: Grade Checks Tests
 
 on:

@@ -47,31 +47,31 @@ def test_score_100_returns_true():
     assert result is True
 
 
-def test_string_score_raises_error():
+def test_string_score_raises_type_error():
     with pytest.raises(TypeError):
         has_passed("50")
 
 
-def test_float_score_raises_error():
+def test_float_score_raises_type_error():
     with pytest.raises(TypeError):
         has_passed(50.5)
 
 
-def test_boolean_score_raises_error():
+def test_boolean_score_raises_type_error():
     with pytest.raises(TypeError):
         has_passed(True)
 
 
-def test_none_score_raises_error():
+def test_none_score_raises_type_error():
     with pytest.raises(TypeError):
         has_passed(None)
 
 
-def test_negative_score_raises_error():
+def test_negative_score_raises_value_error():
     with pytest.raises(ValueError):
         has_passed(-1)
 
 
-def test_score_above_100_raises_error():
+def test_score_above_100_raises_value_error():
     with pytest.raises(ValueError):
         has_passed(101)
